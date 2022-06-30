@@ -5,7 +5,8 @@ import Title from "../components/Title";
 import http from "../utils/http";
 import { SearchOutput } from "../utils/models";
 
-const fetcher = (url: string) => http.get(url).then((res) => res.data);
+const fetcher = (url: string) =>
+  http.get(url).then((res) => (res.data === "" ? [] : res.data));
 
 const CategoriesPage: NextPage = () => {
   const { data: categories } = useSWR<SearchOutput>("categories", fetcher, {

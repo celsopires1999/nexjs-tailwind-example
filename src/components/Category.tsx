@@ -19,16 +19,16 @@ export const Category: React.FunctionComponent<CategoryProps> = (props) => {
       <div className="border-b" />
       <div className="flex p-4 pb-0">
         <div className="flex items-center ml-3">
-          <p className="text-base leading-6 font-medium text-black">
+          <p className="text-base leading-6 font-medium text-black dark:text-white">
             {c.name}
-            <span className="text-sm font-normal text-gray-600">{` - Ativo?: ${isActiveText(
+            <span className="text-sm font-normal text-gray-600 dark:text-gray-400">{` - Ativo?: ${isActiveText(
               c.is_active
             )} - ${createdAtText(c.created_at)}`}</span>
           </p>
         </div>
       </div>
-      <div className="pl-16">
-        <p className="text-black">{c.description}</p>
+      <div className="pl-16 ">
+        <p className="text-black dark:text-white">{c.description}</p>
       </div>
       <div className="m-4" />
     </>

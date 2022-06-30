@@ -10,31 +10,35 @@ const CategoryPage: NextPage = () => {
       <Title>Category</Title>
 
       <form onSubmit={onSubmit}>
-        <div className="col-span-6 sm:col-span-3">
-          <label
-            htmlFor="name"
-            className="block text-lg font-medium text-gray-700"
-          >
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            className="border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
-          />
+        <div className="mb-4">
+          <div className="col-span-6 sm:col-span-3">
+            <label
+              htmlFor="name"
+              className="block text-lg font-medium text-gray-700 dark:text-white"
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              className="bg-default border rounded w-full py-2 px-3 text-black dark:text-white leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
         </div>
-        <label
-          htmlFor="description"
-          className="block text-lg font-medium text-gray-700"
-        >
-          Description
-        </label>
-        <textarea
-          id="description"
-          className="border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
-          rows={10}
-        ></textarea>
+        <div className="mb-4">
+          <label
+            htmlFor="description"
+            className="block text-lg font-medium text-gray-700 dark:text-white"
+          >
+            Description
+          </label>
+          <textarea
+            id="description"
+            className="bg-default border rounded w-full py-2 px-3 text-black dark:text-white leading-tight focus:outline-none focus:shadow-outline"
+            rows={10}
+          ></textarea>
+        </div>
         <Button>Save</Button>
       </form>
     </div>
